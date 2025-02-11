@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Quick Translator",
+  "description": "Select text to translate from English to Chinese",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "contextMenus",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://fanyi-api.baidu.com/*",
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "images/icon.svg"
+  },
+  "icons": {
+    "128": "images/icon.svg"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "background": {
+    "service_worker": "service-worker.js",
+    "type": "module"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["content.js", "content.css"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
