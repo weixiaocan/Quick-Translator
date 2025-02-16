@@ -26,13 +26,13 @@
     display: none;
     width: 300px;
     max-height: 80vh;  /* 设置最大高度为视口高度的80% */
-    padding: 12px;
+    padding: 16px;
     background: white;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     z-index: 2147483647;
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 1.6;
     border: 1px solid #e8e8e8;
     overflow-y: auto;  /* 添加垂直滚动条 */
     overflow-x: hidden;  /* 隐藏水平滚动条 */
@@ -60,17 +60,18 @@
 /* 内容容器 */
 .translation-content {
     margin: 0;
-    padding: 0;
 }
 
 .translation-original {
-    margin-bottom: 8px;
     color: #666;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
     word-wrap: break-word;
 }
 
 .translation-result {
-    color: #1a73e8;
+    color: #333;
     font-weight: 500;
     word-wrap: break-word;
 }
